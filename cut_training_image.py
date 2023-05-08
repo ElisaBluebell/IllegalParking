@@ -1,8 +1,8 @@
 import cv2
 import os
 
-
 cv2.bootstrap()
+
 
 def search(dirname):
     try:
@@ -12,7 +12,7 @@ def search(dirname):
             full_filename = os.path.join(dirname, filename)
 
             if os.path.splitext(full_filename)[1] == ".jpg":
-
+                print(full_filename)
 
             elif os.path.isdir(full_filename):
                 search(full_filename)
